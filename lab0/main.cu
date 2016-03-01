@@ -22,7 +22,7 @@ __global__ void SomeTransform(char *input_gpu, int fsize) {
 	//if (idx < fsize && input_gpu[idx] != '\n') {
 	//	input_gpu[idx] = '!';
 	//}
-	
+	//**å°‡å­—æ¯éƒ½æ›æˆå¤§å¯«**//
 	if (idx < fsize && input_gpu[idx] != '\n'){
 		if (input_gpu[idx] >= 'a' && input_gpu[idx] <= 'z'){
 			input_gpu[idx] -= 32;
@@ -44,9 +44,9 @@ int main(int argc, char **argv)
 		abort();
 	}
 	// get file size
-	fseek(fp, 0, SEEK_END);//¥ı±NÅª¼g¦ì¸m²¾¨ìÀÉ§À
-	size_t fsize = ftell(fp); //¦A¶Ç¦^ÀÉ®×¥Ø«eªºÅª¼g¦ì¸m(ÀÉ§À) ->±o¨ìÀÉ®×ªø«×
-	fseek(fp, 0, SEEK_SET);//¦A±qÀY¶}©lÅª
+	fseek(fp, 0, SEEK_END);//å…ˆå°‡è®€å¯«ä½ç½®ç§»åˆ°æª”å°¾
+	size_t fsize = ftell(fp); //å†å‚³å›æª”æ¡ˆç›®å‰çš„è®€å¯«ä½ç½®(æª”å°¾) ->å¾—åˆ°æª”æ¡ˆé•·åº¦
+	fseek(fp, 0, SEEK_SET);//å†å¾é ­é–‹å§‹è®€
 
 	// read files
 	MemoryBuffer<char> text(fsize+1);
