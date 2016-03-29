@@ -138,6 +138,6 @@ int main(int argc, char **argv)
 	CHECK;
 
 	cudaFree(text_gpu);
-	system("pause");
+	
 	return 0;
 }
